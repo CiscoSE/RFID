@@ -1,4 +1,5 @@
 # RFID
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/CiscoSE/RFID)
 
 ## Introduction
 This use case aims to show the ability of a Cisco Endpoint for access control with an RFID card reader. When an employee swipes their card, the device unlocks and allows them to place calls, whiteboard etc. It also allows them to quickly join their personal rooms with the touch of a button. If an IT personnel swipes their card, the device not only unlocks, but also gives full access to settings. In both cases, when a user logs out, the device locks again.
