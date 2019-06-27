@@ -25,10 +25,11 @@ var activecard="";
 var startTime=1561103288822;
 var currTime="";
 
+//ADD YOUR OWN PERSONAL ROOM AND CARD NUMBERS HERE
 var personalRooms={
-  "0009213811": "stevabra@acecloud.webex.com",
+  "0009213811": "example@acecloud.webex.com",
   "0008731543": "",
-  "0008719067": "stevenwebexteams@collaborationgdc.webex.com"
+  "0008719067": "example@cisco.webex.com"
 }
 
 function mapper(key){
@@ -139,43 +140,9 @@ xapi.event.on('UserInterface Extensions Page Action', (event) => {
 xapi.event.on('UserInterface Extensions Page Action', (event) => {
 
    if(event.Type == 'Opened' && event.PageId == 'logoutButton'){
-    //xapi.command("UserInterface Extensions Panel Save", {"PanelId": "panel_4"})
-
-    //xapi.command("UserInterface Message TextLine Display", {'Text': "Swipe your Access card to Begin", "X":5000, "Y":7000, "Duration": 0})
-    //xapi.config.set("UserInterface Features Call Start", "Hidden")
     clearScreen();
     xapi.config.set('UserInterface SettingsMenu Visibility',"Hidden");
-    // if(cardnumber!="0008731543"){
-    // xapi.command('Phonebook Search', {'PhonebookId': '1', 'Tag': 'Favorite'}).then((favs) => {
-    //   favorites[cardnumber]=[];
-    //   var contactIds=[];
-    //   favs.Contact.forEach(element => {
-    //     favorites[cardnumber].push({"Name":element.Name, "Number": element.ContactMethod[0].Number})
-    //   });
-
-    //   favs.Contact.forEach(element => {
-    //     contactIds.push(element.ContactId)
-    //   });
-
-    //   contactIds.forEach(element => {
-    //     xapi.command('Phonebook Contact Delete',{"ContactId": element});
-    //   })
-
-    //   cardnumber="";
-    // });
-    // }
-    // else
-    //   cardnumber="";
 
 
         }
 });
-
-//UserInterface Features
-
-
-  // xapi.command("UserInterface Message TextLine Display", {'Text': "asdas", "X":5000, "Y":7000, "Duration": 5})
-  //xapi.command("UserInterface Message TextLine Clear")
-
-  //remove call button     xapi.config.set("UserInterface Features Call Start", "Auto/Hidden")
-  //remove all default buttons xapi.config.set("UserInterface Features HideAll", "False/True")
